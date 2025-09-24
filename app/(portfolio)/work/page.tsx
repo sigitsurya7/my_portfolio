@@ -26,13 +26,18 @@ const projects = [
     description: "Aplikasi sekolah berbasis website dan Android dengan integrasi IoT",
     stack: "PHP, React.js, Tailwind CSS, IoT",
   },
+  {
+    title: "Slip Gaji",
+    description: "Aplikasi untuk membuat slip gaji berupa pdf yang akan di kirim melalui whatsapp",
+    stack: "React.js, Tailwind CSS, NodeJs",
+  },
 ] as const;
 
 export default function WorkPage() {
   return (
     <SectionCard
       accent="top-right"
-      backgroundClass="bg-[#FFFBEB]"
+      backgroundClass="bg-[var(--color-work)]"
       title="Proyek"
       lead="Beberapa proyek yang saya kerjakan dengan fokus pada fungsionalitas, kehandalan, dan pengalaman pengguna."
     >
@@ -40,15 +45,15 @@ export default function WorkPage() {
         {projects.map((project) => (
           <article
             key={project.title}
-            className="group relative flex h-full flex-col gap-4 rounded-2xl border-2 border-black bg-white p-5 shadow-[8px_8px_0_0_#1B1B1B] transition-transform duration-150 ease-out hover:-translate-x-1.5 hover:-translate-y-1.5"
+            className="group relative flex h-full flex-col gap-4 rounded-2xl border-2 border-[var(--color-border)] bg-[var(--color-card)] p-5 shadow-[8px_8px_0_0_var(--color-shadow)] transition-transform duration-150 ease-out hover:-translate-x-1.5 hover:-translate-y-1.5"
           >
-            <span className="inline-flex w-max items-center gap-2 rounded-full border-2 border-black bg-[#F8FF7F] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]">
+            <span className="inline-flex w-max items-center gap-2 rounded-full border-2 border-[var(--color-border)] bg-[var(--color-highlight)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em]">
               ⚡️ Sorotan
             </span>
             <h3 className="text-2xl font-semibold leading-tight">{project.title}</h3>
-            <p className="text-sm leading-relaxed text-[#2A2A2A]">{project.description}</p>
-            <div className="mt-auto flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#1B1B1B]">
-              <span className="rounded-full border border-black bg-[#F5F2EB] px-3 py-1">{project.stack}</span>
+            <p className="text-sm leading-relaxed text-[var(--color-body)]">{project.description}</p>
+            <div className="mt-auto flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-foreground)]">
+              <span className="rounded-full border border-[var(--color-border)] bg-[var(--color-tag)] px-3 py-1">{project.stack}</span>
             </div>
           </article>
         ))}

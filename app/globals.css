@@ -1,27 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root,
+.light {
+  color-scheme: light;
+  --color-background: #f5f2eb;
+  --color-foreground: #1b1b1b;
+  --color-body: #2a2a2a;
+  --color-muted: #363636;
+  --color-subtle: #424242;
+  --color-caption: #5c5c5c;
+
+  --color-border: #1b1b1b;
+  --color-shadow: #1b1b1b;
+
+  --color-card: #ffffff;
+  --color-tag: #f5f2eb;
+  --color-highlight: #f8ff7f;
+  --color-accent-blue: #c9f0ff;
+  --color-accent-pink: #ffb4e6;
+
+  --color-home: #a9ffdc;
+  --color-work: #fffbeb;
+  --color-about: #ffdce6;
+  --color-experience: #e2edff;
+
+  --color-overlay: #1b1b1b;
+  --color-sheer: rgba(255, 255, 255, 0.7);
+  --color-doodle-yellow: #f8ff7f;
+  --color-doodle-pink: #ffb4e6;
+  --color-doodle-blue: #c9f0ff;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-background: #0f1116;
+  --color-foreground: #f5f5f7;
+  --color-body: #d8dbe3;
+  --color-muted: #c4c8d4;
+  --color-subtle: #afb4c4;
+  --color-caption: #9aa1b3;
+
+  --color-border: #f5f5f7;
+  --color-shadow: #f5f5f7;
+
+  --color-card: #161b24;
+  --color-tag: #202530;
+  --color-highlight: #d8f05a;
+  --color-accent-blue: #357ead;
+  --color-accent-pink: #c85ca7;
+
+  --color-home: #1f7b66;
+  --color-work: #5d4a1f;
+  --color-about: #8c3d63;
+  --color-experience: #2f4478;
+
+  --color-overlay: #f5f5f7;
+  --color-sheer: rgba(245, 245, 247, 0.25);
+  --color-doodle-yellow: #d8f05a;
+  --color-doodle-pink: #c85ca7;
+  --color-doodle-blue: #357ead;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 

@@ -22,11 +22,11 @@ export default function AboutPage() {
   return (
     <SectionCard
       accent="top-left"
-      backgroundClass="bg-[#FFDDE3]"
+      backgroundClass="bg-[var(--color-about)]"
       title="Tentang"
       lead="Seorang programmer yang fokus pada pengembangan aplikasi fungsional, efisien, dan mudah digunakan."
     >
-      <div className="mt-6 space-y-6 text-base leading-relaxed text-[#2A2A2A] sm:text-lg">
+      <div className="mt-6 space-y-6 text-base leading-relaxed text-[var(--color-body)] sm:text-lg">
         <p>
           Selama beberapa tahun terakhir saya banyak mengerjakan berbagai proyek, mulai dari
           aplikasi web hingga mobile. Fokus saya ada pada membangun solusi digital dengan kode
@@ -42,7 +42,7 @@ export default function AboutPage() {
         {traits.map((item) => (
           <div
             key={item}
-            className="flex items-center gap-3 rounded-2xl border-2 border-black bg-white px-4 py-3 shadow-[6px_6px_0_0_#1B1B1B]"
+            className="flex items-center gap-3 rounded-2xl border-2 border-[var(--color-border)] bg-[var(--color-card)] px-4 py-3 shadow-[6px_6px_0_0_var(--color-shadow)]"
           >
             <span className="text-2xl">✶</span>
             <span className="text-sm font-semibold uppercase tracking-[0.2em]">{item}</span>
@@ -53,10 +53,10 @@ export default function AboutPage() {
         {programmerExtras.map((item) => (
           <div
             key={item.title}
-            className="rounded-2xl border-2 border-black bg-white px-4 py-5 shadow-[6px_6px_0_0_#1B1B1B]"
+            className="rounded-2xl border-2 border-[var(--color-border)] bg-[var(--color-card)] px-4 py-5 shadow-[6px_6px_0_0_var(--color-shadow)]"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5C5C5C]">{item.title}</p>
-            <p className="mt-2 text-base font-semibold text-[#1B1B1B]">{item.value}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-caption)]">{item.title}</p>
+            <p className="mt-2 text-base font-semibold text-[var(--color-foreground)]">{item.value}</p>
           </div>
         ))}
       </div>

@@ -35,7 +35,7 @@ export default function ExperiencePage() {
   return (
     <SectionCard
       accent="bottom-right"
-      backgroundClass="bg-[#E2EDFF]"
+      backgroundClass="bg-[var(--color-experience)]"
       title="Pengalaman"
       lead="Linimasa tim dan produk yang membentuk perjalanan karier saya."
     >
@@ -43,16 +43,16 @@ export default function ExperiencePage() {
         {experience.map((item) => (
           <article
             key={[item.role, item.company].join("-")}
-            className="rounded-2xl border-2 border-black bg-white p-5 shadow-[6px_6px_0_0_#1B1B1B]"
+            className="rounded-2xl border-2 border-[var(--color-border)] bg-[var(--color-card)] p-5 shadow-[6px_6px_0_0_var(--color-shadow)]"
           >
             <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
               <h3 className="text-xl font-semibold">
                 {item.role}{" "}
-                <span className="text-base font-normal text-[#424242]">· {item.company}</span>
+                <span className="text-base font-normal text-[var(--color-subtle)]">· {item.company}</span>
               </h3>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#1B1B1B]">{item.period}</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-foreground)]">{item.period}</span>
             </div>
-            <p className="mt-3 text-sm leading-relaxed text-[#2A2A2A]">{item.summary}</p>
+            <p className="mt-3 text-sm leading-relaxed text-[var(--color-body)]">{item.summary}</p>
           </article>
         ))}
       </div>
