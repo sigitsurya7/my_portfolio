@@ -4,12 +4,12 @@ const projects = [
   {
     title: "Kwala Finance",
     description: "Aplikasi pencatatan keuangan berbasis Android",
-    stack: "Expo & Expo Go (FE)",
+    stack: "React Native & Expo Go + Sqlite (FE)",
   },
   {
     title: "Kwala Space",
     description: "Aplikasi pelacak suasana hati (mood tracker) berbasis Android",
-    stack: "Expo & Expo Go (FE)",
+    stack: "React Native & Expo Go + Sqlite (FE)",
   },
   {
     title: "Reblood",

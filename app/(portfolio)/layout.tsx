@@ -189,7 +189,9 @@ export default function PortfolioLayout({
               {activeItem ? "Sekarang anda di " + activeItem.label : "Explore"}
             </span>
 
-            <ThemeToggleButton theme={theme} onToggle={toggleTheme} variant="compact" className="w-max hidden lg:block" />
+            <div className="hidden lg:block">
+              <ThemeToggleButton theme={theme} onToggle={toggleTheme} variant="compact" className="w-max" />
+            </div>
           </div>
           <div className="flex-1">{children}</div>
           <footer className="mt-8 rounded-3xl border-4 border-[var(--color-border)] bg-[var(--color-highlight)] p-6 text-center shadow-[12px_12px_0_0_var(--color-shadow)]">

@@ -25,7 +25,7 @@ const experience = [
   {
     role: "Guru",
     company: "SMK Gelora Bekasi",
-    period: "2018 — 2021",
+    period: "2017 — 2022",
     summary:
       "Menjadi guru dibidang Teknik Komputer Jaringan",
   },
